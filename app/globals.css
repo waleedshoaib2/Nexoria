@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 222 47% 11%;
+    --foreground: 213 31% 91%;
+    --card: 222 47% 11%;
+    --card-foreground: 213 31% 91%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 213 31% 91%;
+    --primary: 170 100% 45%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 217 92% 17%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 92% 17%;
+    --muted-foreground: 215 25% 27%;
+    --accent: 170 100% 45%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217 19% 27%;
+    --input: 217 19% 27%;
+    --ring: 170 100% 45%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-[#00ffa3] to-[#00c8ff];
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at center, rgba(0, 255, 163, 0.15) 0%, rgba(0, 200, 255, 0.15) 25%, rgba(0, 0, 0, 0) 50%);
+}
+
+.perspective {
+  perspective: 1000px;
+}
+
+.portfolio-card {
+  @apply relative overflow-hidden rounded-xl;
+}
+
+[transform-style="preserve-3d"] {
+  transform-style: preserve-3d;
+}
+
+.translate-z-30 {
+  transform: translateZ(30px);
+}
